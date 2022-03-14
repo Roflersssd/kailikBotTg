@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  bot: 
+    image: alexeymrvz/hookah-locator-bot
+    container_name: "hookah-locator-bot"
+    command: sh -c "PYTHONPATH='.' python3 src/bot.py"
+    env_file:
+      - ./creds/credentials.env
